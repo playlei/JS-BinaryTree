@@ -30,7 +30,7 @@ function f1(obj,str,arr){
 				console.log('找到了',obj[key]);
 				console.log(arr);
 				turn=1;//同上找多个就不用写了。			
-    }else{
+   			}else{
 				var newarr=[];
 				newarr=newarr.concat(arr);
 				newarr.push(key);
