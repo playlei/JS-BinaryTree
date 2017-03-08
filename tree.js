@@ -7,7 +7,7 @@ var obj={
 			a:{
 				c:{a:'asd'},
 				t:{a:'qwe'},
-				b:{c:'sad'},
+				b:{c:'sad'}, 
 				f:{a:'66'},
 			}
 		}
@@ -39,4 +39,4 @@ function f1(obj,str,arr){
 		}
 	}
 }
-f1(obj,'f',[]);
+f1(obj,'f',[]);//参数分别是 要查询的对象、要查询的属性，和一个空数组
