@@ -33,7 +33,7 @@ function f1(obj,str,arr){
    			}else{
 				var newarr=[];
 				newarr=newarr.concat(arr);
-				newarr.push(key);
+				newarr.push(key); 
 				f1(obj[key],str,newarr);
 			}
 		}
