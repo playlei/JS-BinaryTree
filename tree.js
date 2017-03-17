@@ -1,27 +1,6 @@
 //json例子//没注意格式，主要是给点思路。
-var obj={
-	a:{
-		a:{a:'111'},
-		b:{a:656},
-		c:{
-			a:{
-				c:{a:'asd'},
-				t:{a:'qwe'},
-				b:{c:'sad'}, 
-				f:{a:'66'},
-			}
-		}
-	},
-	b:{
-		a:'c',
-		d:'d',
-		a:{f:{a:'666'}},
-		z:{
-			a:'asd',
-			y:{a:'asd'},
-		}
-	}
-}
+//多级对象
+var obj={a:{a:{a:'111'},b:{a:656},c:{a:{c:{a:'asd'},t:{a:'qwe'},b:{c:'sad'},f:{a:'66'},}}},b:{a:'c',d:'d',a:{f:{a:'666'}},z:{a:'asd',y:{a:'asd'},}}}
 var turn=0;//这个 类似一个开关。找一个和找多个
 function f1(obj,str,arr){
 	for (var key in obj){
@@ -34,7 +13,7 @@ function f1(obj,str,arr){
 				var newarr=[];
 				newarr=newarr.concat(arr);
 				newarr.push(key); 
-				f1(obj[key],str,newarr);
+        arguments.callee(obj[key],str,newarr)  
 			}
 		}
 	}
